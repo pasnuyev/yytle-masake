@@ -1,0 +1,62 @@
+<!--
+https://jsbin.com/soxivil
+-->
+<html>
+<head>
+<title>Generate a Tilsan name</title>
+</head>
+<body>
+  <b>WELCOME TO MY MADNESS!</b>
+    <h1>Generate a Tilsan name</h1>
+    <h2>Choose a gender: 
+        <select id="gender">
+            <option value="female">Female ♀</option>
+            <option value="male">Male ♂</option>
+            <option value="fuckyou">Other ?</option>
+        </select>
+    </h2>
+  
+    <p>Click the box to make a name.</p>
+    <button onclick="generateName()">Create a name right now!</button>
+  
+    <div class="output">
+        <input type="text" id="fullName" readonly>
+    </div>
+  
+    <script>
+        function generateName() {
+            var maleFirstNames = ['Anri','Deyn','Allis','Joyz','Kozaki','Aderis','Ardol','Arzel','Jesni','Jin','Kalch','Maisruk','Maysruk','Nevaki','Shin','Sokin','Uril','Vlem','Yatav','Yetsuik','Yetsuyk','Idyuk','Svoyir','Tilar'];
+            var femaleFirstNames = ['Korin','Korina','Karin','Karina','Katarin','Katrina','Ryo','Rya','Ryu','Loreta','Loretta','Keri','Kari','Nara','Akari','Akeri','Tori','Meytori','Sutori','Uslay','Kanna','Mariye’','Mariya','Kyaujizhi','Kyau','Aruya','Saya','Aya','Mauris','Lauren','Niki','Nikki','Aliys','Kozaki','Meri','Deyel','Akire','Arzel','Ayana','Eri','Ila','Mara','Mayhirin','Milayna','Mira','Miuna','Miyuna','Nevaki','Tilsa','Ilsa','Re’na','Saki','Say’yumi','Svoyirna','Yanolin','Yerumi','Yurakay'];
+            var fuckyouFirstNames = ['There are only 2 genders.','Why are you clicking for this?','There are only 2 genders!','2 genders only.','Why are you so persistent?','KYS. Keep yourself safe.','This is not funny.','Just choose one of the genders.'];
+            // ONLY TWO GENDERS MATE!!! ILA EYASH JEGEM LAYDE!!! MAISRUK PASNUYEV!!! //
+            var maleLastNames = ['Jizhi','Kyaujizhi','Bohezruyev','Uzgrev','Kutechi','Stindov','Verulov','Kyufol','Aderis','Akrichkov','Akrichkov','Asuminggov','Avedanov','Azhevnak','Chiyliyrov','Choring','Chutezhavedanov','Engguvas','Ilsov','Janggi','Jativungels','Kidushov','Kimiv','Kumirev','Kundayshi','Kyuzev','Mirnadov','Nozhayev','Pasnuyev','Pasnuyev','Serliyev','Serliyev','Sleyakot','Spahesov','Spahetov','Spahezov','Spakhetov','Stelunov','Svenarasi','Takakov','Toshmeyk','Tsibun','Tsibunkishto','Turol','Yatav','Yuvdashi'];
+            var femaleLastNames = ['Jizhi','Kyaujizhi','Bohezruyeva','Uzgreva','Kutechi','Stindova','Verulova','Aderis','Akrichkova','Asuminggova','Atsukevi','Avedanova','Azhevnak','Chiyliyrova','Choring','Chutezhavedanova','Engguvas','Janggi','Jativungels','Kimiv','Kundayshi','Kyuzev','Mirnadova','Pasnuyeva','Pasnuyeva','Say’yumi','Serliyeva','Sleyakot','Stelunova','Svenarasi','Takakova','Tsibun','Tsibunkishto','Turol','Yatav','Yuvdashi','Kyufol'];
+            var fuckyouLastNames = ['•‿•','◑‿◐','ツ','=＾● ⋏ ●＾=','＾-＾','^.~','＾0＾','ミヽ（。＞＜）ノ','╹◡◠','✿◠‿◠','◠‿◠','ಠ_ಠ','¬､¬',' ͡❛ ͜ʖ ͡❛','( ͡° ͜ʖ ͡°)','(´・ω・`)','=^ω^=','๑>ᴗ<๑','￣へ￣','(°ロ°)☝','(* ^ ω ^)','(〃＾▽＾〃)','(＃＞＜)','-_-','￢_￢','（＾ｖ＾）'];
+
+            var gender = document.getElementById('gender').value;
+            var firstName, lastName;
+
+            if (gender === 'male') {
+                firstName = maleFirstNames[Math.floor(Math.random() * maleFirstNames.length)];
+                lastName = maleLastNames[Math.floor(Math.random() * maleLastNames.length)];
+            } else if (gender === 'female') {
+                firstName = femaleFirstNames[Math.floor(Math.random() * femaleFirstNames.length)];
+                lastName = femaleLastNames[Math.floor(Math.random() * femaleLastNames.length)];
+            } else if (gender === 'fuckyou') {
+                firstName = fuckyouFirstNames[Math.floor(Math.random() * fuckyouFirstNames.length)];
+                lastName = fuckyouLastNames[Math.floor(Math.random() * fuckyouLastNames.length)];
+            }
+
+            var fullName = firstName + " " + lastName;
+            var output = document.getElementById('fullName');
+            output.value = fullName;
+        }
+    </script>
+  
+  <img src="https://cdn.discordapp.com/attachments/1211629611000266753/1211629706500116510/R.gif?ex=65eee519&is=65dc7019&hm=6bd76afa377f1290588f989978ec88371c6b914e753fd0ff0796ef478eba08b6&" alt="WOW!" width="420" height="245">
+  
+  <p>
+ <button onclick="location.href = 'https://jsbin.com/jisenuk';" id="myButton" class="float-left submit-button" >Tilsan Version?</button>
+  
+</body>
+</html>
