@@ -1,0 +1,38 @@
+body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Calibri, sans-serif;
+        }
+        
+        h1 {
+            margin-top: 6px;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: gray;
+        }
+        
+        .output {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        input {
+            width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 18px;
+        }
